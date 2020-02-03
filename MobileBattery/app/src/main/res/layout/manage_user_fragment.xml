@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:paddingBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply Filter"
+                android:textSize="18sp"
+                android:textColor="@color/fontHeadingColor"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/addNewUserBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="10dp"
+                android:text="+ New User"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/segoe_ui"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/login_button_bcg"
+                android:paddingStart="10dp"
+                android:paddingBottom="3dp"
+                android:paddingEnd="10dp"/>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bcg">
+
+                <Spinner
+                    android:id="@+id/filterUserTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="1dp"
+                    android:spinnerMode="dropdown"
+                    android:backgroundTint="@color/blueOne"
+                    android:paddingEnd="10dp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/filterByNameSpinner"
+                    android:layout_width="210dp"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="10dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="10dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/drop_down_arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"/>
+
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/searchByNameET"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="35dp"
+                android:focusable="auto"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:hint="Name"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/segoe_ui"
+                android:textColor="@color/fontContentColor"
+                android:textColorHint="@color/fontContentColor"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/filterByEmailSpinner"
+                    android:layout_width="210dp"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="10dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="10dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/drop_down_arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"/>
+
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/searchByEmailET"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_gravity="center_vertical"
+                android:hint="Email"
+                android:paddingStart="10dp"
+                android:focusable="auto"
+                android:fontFamily="@font/segoe_ui"
+                android:textColor="@color/fontContentColor"
+                android:textColorHint="@color/fontContentColor"
+                android:textSize="18sp"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp">
+
+
+                <ImageButton
+                    android:id="@+id/resetFilter"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_button_bcg"
+                    android:src="@drawable/ic_refresh_white"/>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noUserFoundTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No User Found!"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:textColor="@color/fontHeadingColor"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:textSize="24sp"/>
+
+        <ListView
+            android:id="@+id/userList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@android:color/white"
+            android:layout_marginEnd="15dp"
+            android:elevation="5dp"
+            android:scrollbars="vertical"
+            android:divider="@color/mobileListDividerColor"
+            android:dividerHeight="1dp"
+            android:smoothScrollbar="true"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/newUserForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none"
+        android:background="@android:color/white"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/closeNewUserFormBtn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_close_blue"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/closeNewUserFormBtn"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/person"
+                    android:layout_gravity="center_horizontal"
+                    app:civ_border_color="@color/blueOne"
+                    app:civ_border_width="1dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="First Name"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/fontHeadingColor"
+                    />
+                <EditText
+                    android:id="@+id/firstNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:hint="First Name"
+                    android:paddingStart="10dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Last Name"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/fontHeadingColor"
+                    />
+
+                <EditText
+                    android:id="@+id/lastNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:hint="Last Name"
+                    android:paddingStart="10dp"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:backgroundTint="@color/blueOne"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="User Name"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/fontHeadingColor"
+                    />
+
+                <EditText
+                    android:id="@+id/userNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:hint="User Name"
+                    android:paddingStart="10dp"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:maxLines="1"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/email_id"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/fontHeadingColor"
+                    />
+                <EditText
+                    android:id="@+id/emailIdEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:hint="@string/email_id"
+                    android:paddingStart="10dp"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:maxLines="1"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Phone No."
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/fontHeadingColor"
+                    />
+                <EditText
+                    android:id="@+id/phoneNoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Phone No."
+                    android:inputType="phone"
+                    android:maxLength="9"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontContentColor"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Profile Image"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/line">
+
+                    <TextView
+                        android:id="@+id/profileImageSelectedName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Image.."
+                        android:textColorHint="@color/fontContentColor"
+                        android:textSize="18sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginEnd="30dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textColor="@color/fontContentColor"
+                        android:paddingStart="10dp"/>
+                    <TextView
+                        android:id="@+id/selectProfileImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_alignParentEnd="true"
+                        android:text="Image.."
+                        android:layout_centerVertical="true"
+                        android:paddingEnd="3dp"
+                        android:paddingStart="3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textColor="@color/fontHeadingColor"
+                        />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_toStartOf="@id/selectProfileImage"
+                        android:background="@color/blueOne"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="3dp"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Select User Type"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/fontHeadingColor"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/line">
+
+                    <Spinner
+                        android:id="@+id/userTypeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/drop_down_arrow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/passTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/password"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/fontHeadingColor"
+                    />
+
+                <EditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:hint="@string/password"
+                    android:paddingStart="10dp"
+                    android:inputType="textPassword"
+                    android:paddingEnd="5dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:maxLines="1"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    />
+                <TextView
+                    android:id="@+id/cPassTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/con_password"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/fontHeadingColor"
+                    />
+                <EditText
+                    android:id="@+id/conPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:hint="Confirm Password"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="10dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:maxLines="1"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    />
+
+                <Button
+                    android:id="@+id/registerUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/login_button_bcg"
+                    android:paddingEnd="30dp"
+                    android:paddingStart="30dp"
+                    android:layout_marginBottom="20dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

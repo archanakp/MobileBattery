@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:paddingStart="25dp"
+            android:paddingEnd="5dp"
+            android:layout_marginBottom="1dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/center"
+                android:layout_toStartOf="@id/action">
+
+                <TextView
+                    android:id="@+id/trf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:text="Traf. To: "
+                    android:visibility="gone"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/transferredTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/trf"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="transferredTo"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/action">
+
+                <TextView
+                    android:id="@+id/sent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="Sent By: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/agentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/sent"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="agentName"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/center"
+                android:layout_toStartOf="@id/action">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Amount: "
+                        android:visibility="gone"
+                        android:textColor="@color/fontHeadingColor"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:text="amount"
+                        android:textColor="@color/fontContentColor"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Date: "
+                        android:textColor="@color/fontHeadingColor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/transferDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:text="10-05-2018"
+                        android:textColor="@color/fontContentColor"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/action"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="7dp">
+
+                    <RelativeLayout
+                        android:id="@+id/transferStatusBcg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/greenBcg">
+
+                        <TextView
+                            android:id="@+id/transferStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_centerInParent="true"
+                            android:text="Accepted"
+                            android:textColor="@android:color/white"
+                            android:padding="3dp"
+                            android:visibility="visible"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/segoe_ui"
+                            />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/deleteDetails"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/up"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_delete_black" />
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mobileListDividerColor"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

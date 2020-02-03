@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:elevation="5dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="50dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="@color/listDeviderColor"
+                android:padding="0.5dp"
+                android:weightSum="11">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@android:color/white"
+                    android:maxLines="1"
+                    android:text="Agent Name"
+                    android:ellipsize="end"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0.5dp"
+                    android:gravity="center"
+                    android:background="@android:color/white"
+                    android:maxLines="1"
+                    android:text="Receipt No."
+                    android:ellipsize="end"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0.5dp"
+                    android:gravity="center"
+                    android:background="@android:color/white"
+                    android:maxLines="1"
+                    android:text="Job Issue"
+                    android:ellipsize="end"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0.5dp"
+                    android:gravity="center"
+                    android:background="@android:color/white"
+                    android:maxLines="1"
+                    android:text="Is Accepted"
+                    android:ellipsize="end"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    />
+
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/overTimeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/actionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackTranBcg"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirm Requested Overtime!"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="24sp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/segoe_ui_bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agent Name: "
+                    android:textSize="20sp"
+                    android:textColor="@color/fontHeadingColor"
+                    android:fontFamily="@font/segoe_ui_bold"/>
+
+                <TextView
+                    android:id="@+id/agentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agent Name: "
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job ID: "
+                    android:textSize="20sp"
+                    android:textColor="@color/fontHeadingColor"
+                    android:fontFamily="@font/segoe_ui_bold"/>
+
+                <TextView
+                    android:id="@+id/jobID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jobId"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Issue: "
+                    android:textSize="20sp"
+                    android:textColor="@color/fontHeadingColor"
+                    android:fontFamily="@font/segoe_ui_bold"/>
+
+                <TextView
+                    android:id="@+id/jobIssue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jobIssue"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"/>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/actionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+                <RadioButton
+                    android:id="@+id/accept"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="22sp"
+                    android:text="Approve"
+                    android:checked="true"
+                    android:fontFamily="@font/segoe_ui_bold"/>
+                <RadioButton
+                    android:id="@+id/deny"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="22sp"
+                    android:text="Deny"
+                    android:fontFamily="@font/segoe_ui_bold"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/saveActionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_button_bcg"
+                android:layout_marginTop="20dp"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/segoe_ui_bold"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

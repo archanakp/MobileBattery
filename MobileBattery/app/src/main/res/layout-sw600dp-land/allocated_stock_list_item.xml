@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/listDeviderColor"
+        android:orientation="horizontal"
+        android:padding="0.5dp">
+
+        <RelativeLayout
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#fff">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp"
+                >
+                <ImageView
+                    android:id="@+id/batteryImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/person"/>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="12"
+            >
+
+            <TextView
+                android:id="@+id/techNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="3"
+                android:background="@android:color/white"
+                android:ellipsize="end"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:text="Tech. Name"
+                android:textColor="@color/fontContentColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/batteryBrandNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="3"
+                android:background="@android:color/white"
+                android:ellipsize="end"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:text="Brand Name"
+                android:textColor="@color/fontContentColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/batterySkuTextView"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:text="SKU"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:gravity="center_vertical|start"
+                android:textColor="@color/fontContentColor"
+                android:layout_marginStart="0.5dp"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/assignedQtyTextView"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:text="Assigned Qty: "
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/fontContentColor"
+                android:layout_marginStart="0.5dp"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/soldTextView"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="start|center_vertical"
+                android:text="Sold"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:textColor="@color/blackTextColor"
+                android:layout_marginStart="0.5dp"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/remainingQtyTextView"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:text="Remaining Qty :"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/fontContentColor"
+                android:layout_marginStart="0.5dp"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:ellipsize="end"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

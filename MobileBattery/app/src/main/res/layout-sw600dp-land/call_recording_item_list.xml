@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/listDeviderColor"
+        android:padding="0.5dp"
+        android:weightSum="8">
+        <TextView
+            android:id="@+id/agentName"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/fontContentColor"
+            android:textSize="20sp"
+            android:fontFamily="@font/segoe_ui"
+            />
+        <TextView
+            android:id="@+id/callTime"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0.5dp"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/fontContentColor"
+            android:textSize="20sp"
+            android:fontFamily="@font/segoe_ui"
+            />
+        <TextView
+            android:id="@+id/callRemark"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0.5dp"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/fontContentColor"
+            android:textSize="20sp"
+            android:fontFamily="@font/segoe_ui"
+            />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_marginStart="0.5dp"
+            >
+
+            <ImageView
+                android:id="@+id/playAudioIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_play_circle"
+                />
+
+            <ImageView
+                android:id="@+id/pauseAudioIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_pause_circle"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

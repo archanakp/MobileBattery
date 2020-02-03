@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/relativeLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/addNewJobBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/login_button_bcg"
+                android:text="+ New Jobs"
+                android:textColor="@android:color/white"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:fontFamily="@font/segoe_ui"
+                android:textSize="18dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/addNewJobBtn"
+                android:layout_marginEnd="15dp"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edit_text_bcg"
+                    android:layout_marginEnd="7dp"
+                    >
+
+                    <Spinner
+                        android:id="@+id/customerNameSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="10dp"
+                        android:backgroundTint="@color/blueOne"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/searchByLocationET"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edit_text_bcg"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginStart="7dp"
+                    android:hint="Search By Location"
+                    android:paddingStart="10dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontContentColor"
+                    />
+                <EditText
+                    android:id="@+id/searchSourceOfCallET"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edit_text_bcg"
+                    android:layout_marginStart="7dp"
+                    android:hint="Source Of Call"
+                    android:paddingStart="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="7dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontContentColor"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/resetFilter"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/login_button_bcg"
+                        android:src="@drawable/ic_refresh_white"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/listDeviderColor"
+            android:orientation="horizontal"
+            android:padding="0.5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:weightSum="14">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@android:color/white"
+                android:ellipsize="end"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Customer Name"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="3"
+                android:background="@android:color/white"
+                android:ellipsize="end"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Location"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="3"
+                android:background="@android:color/white"
+                android:ellipsize="end"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Source Of Call"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="3"
+                android:background="@android:color/white"
+                android:ellipsize="end"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Issue"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="2"
+                android:background="@android:color/white"
+                android:ellipsize="end"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Action"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noResultFoundTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Result Found !"
+            android:textColor="@color/fontHeadingColor"
+            android:textSize="24sp"
+            android:visibility="gone"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+
+        <ListView
+            android:id="@+id/jobsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:scrollbars="none"
+            android:elevation="5dp"
+            android:dividerHeight="1dp"
+            android:divider="@color/mobileListDividerColor"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/addJobsForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:scrollbars="none"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/closeAddJobsFormIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_close_blue"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginStart="35dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Customer"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp">
+                    <Spinner
+                        android:id="@+id/customerSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/blueOne"
+                        android:paddingStart="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blueOne"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/locationET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Location"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Source of Call"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/sourceOfCallET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Source of Call"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Issues"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/issuesET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Issues"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quick Note"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/quickNoteET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Quick Note"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Warranty"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <RadioGroup
+                    android:id="@+id/btWarrantyGPR"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/warrantyYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textSize="16sp"
+                        android:textColor="@color/fontContentColor"
+                        android:backgroundTint="@color/blueOne"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/warrantyNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textSize="16sp"
+                        android:textColor="@color/fontContentColor"
+                        android:backgroundTint="@color/blueOne"
+                        android:layout_marginStart="15dp"/>
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Push Sale"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <RadioGroup
+                    android:id="@+id/pushSaleGPR"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/pushSaleYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textSize="16sp"
+                        android:textColor="@color/fontContentColor"
+                        android:backgroundTint="@color/blueOne"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/pushSaleNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textSize="16sp"
+                        android:textColor="@color/fontContentColor"
+                        android:backgroundTint="@color/blueOne"
+                        android:layout_marginStart="15dp"/>
+                </RadioGroup>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Offered Price Type"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp">
+                    <Spinner
+                        android:id="@+id/offeredPriceTypeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/blueOne"
+                        android:paddingStart="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blueOne"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Offered Price"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/offeredPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Offered Price"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="number"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Battery Details"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Battery SKU"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/currentBtSKUET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Current Battery SKU"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Battery Brand"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/currentBtBrandET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Current Battery Brand"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Battery Size"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/currentBtSizeET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Current Battery Size"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="number"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Battery Details"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Battery SKU"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/newBtSKUET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="New Battery SKU"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Battery Brand"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/newBtBrandET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="New Battery Brand"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Battery Size"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/fontHeadingColor"/>
+
+                <EditText
+                    android:id="@+id/newBtSizeET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="New Battery Size"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="number"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textColor="@color/fontContentColor"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="16sp"/>
+
+                <Button
+                    android:id="@+id/saveJobsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save Job"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textSize="20sp"
+                    android:background="@drawable/login_button_bcg"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/assignJobLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/blackTranBcg">
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_centerInParent="true"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assign Job To Technician !"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="24sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Name: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/custNameAssJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jack Jonce"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Name: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/vehicleNameAssJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jack Jonce"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Issue Faced: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/issueAssJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jack Jonce"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/locationAssJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jack Jonce"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:ellipsize="end"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_margin="20sp"
+                android:background="@drawable/edit_text_bcg">
+                <Spinner
+                    android:id="@+id/techSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/blueOne"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/assignJobsToTechBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/login_button_bcg"
+                android:layout_margin="20dp"
+                android:text="Assign"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/segoe_ui_bold"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply Filter"
+                android:textSize="18sp"
+                android:textColor="@color/fontHeadingColor"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/addNewBatteryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="+ Scrap Battery"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/login_button_bcg"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_marginEnd="15dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/sourceSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edit_text_bcg"
+                    android:gravity="center_vertical|start"
+                    android:layout_marginBottom="2dp"
+                    android:paddingStart="1dp"
+                    android:paddingEnd="10dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/drop_down_arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"/>
+
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/searchByBrand"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="35dp"
+                android:focusable="auto"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:hint="Brand"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/segoe_ui"
+                android:textColor="@color/fontContentColor"
+                android:textColorHint="@color/fontContentColor"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <EditText
+                android:id="@+id/searchBySKUET"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="35dp"
+                android:focusable="auto"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_gravity="center_vertical"
+                android:hint="SKU"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/segoe_ui"
+                android:textColor="@color/fontContentColor"
+                android:textColorHint="@color/fontContentColor"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/searchBySizeET"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="35dp"
+                android:focusable="auto"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:hint="Size"
+                android:paddingStart="10dp"
+                android:visibility="gone"
+                android:fontFamily="@font/segoe_ui"
+                android:textColor="@color/fontContentColor"
+                android:textColorHint="@color/fontContentColor"
+                android:textSize="18sp"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="35dp"
+                android:layout_marginStart="7dp">
+
+                <ImageButton
+                    android:id="@+id/refreshFilter"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/login_button_bcg"
+                    android:src="@drawable/ic_refresh_white"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noResultFoundTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Result Found!"
+            android:textSize="24sp"
+            android:textColor="@color/fontHeadingColor"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            >
+            <ListView
+                android:id="@+id/newBatteryList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:background="@android:color/white"
+                android:elevation="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:divider="@color/mobileListDividerColor"
+                android:dividerHeight="1dp"
+                android:visibility="visible"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/batteryRecyclerList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:background="@android:color/white"
+                android:elevation="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/addBatteryForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@android:color/white"
+        android:visibility="gone">
+        <RelativeLayout
+            android:id="@+id/addNewBatteryFormLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/closeFormBtn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_close_blue"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/first"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Battery"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:id="@+id/batteryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:layout_marginTop="10dp"
+                    android:hint="Battery"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/blackColor"
+                    android:paddingStart="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Battery Source"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/line">
+
+                    <Spinner
+                        android:id="@+id/addBatterySourceSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|start"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="2dp"
+                        android:backgroundTint="@color/blueOne"
+                        android:paddingStart="1dp"
+                        android:paddingEnd="10dp"/>
+
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sourceTypeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Technician/Supplier"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/line">
+
+                    <Spinner
+                        android:id="@+id/addTechOrSupIdSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|start"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/blueOne"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="1dp"
+                        android:paddingEnd="10dp"/>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:id="@+id/addQuantityEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:layout_marginTop="10dp"
+                    android:hint="Quantity"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/blackColor"
+                    android:paddingStart="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cost Price"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:id="@+id/addCostPriceEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Cost Price"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/blackColor"
+                    android:paddingStart="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Sale Price Type"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/line">
+
+                    <Spinner
+                        android:id="@+id/addSalePriceTypeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|start"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="1dp"
+                        android:backgroundTint="@color/blueOne"
+                        android:paddingEnd="10dp"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lower Retail Sale Price"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:id="@+id/addLowerRetailSalePriceEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Lower Retail Sale Price"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/blackColor"
+                    android:paddingStart="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Retail Sale Price"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:id="@+id/addSalePriceEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Retail Sale Price"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/blackColor"
+                    android:paddingStart="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Higher Retail Sale Price"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:id="@+id/addHigherRetailSalePriceEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Higher Retail Sale Price"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/blackColor"
+                    android:paddingStart="10dp"/>
+
+
+
+                <Button
+                    android:id="@+id/addNewBatteryRecordBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/login_button_bcg"
+                    android:text="Save"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/productNameListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="130dp"
+        android:background="@android:color/white"
+        android:scrollbars="none"
+        android:elevation="8dp"
+        android:dividerHeight="1dp"
+        android:divider="@color/mobileListDividerColor"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackTranBcg"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assign Battery To Technician!"
+                android:textSize="22sp"
+                android:textColor="@color/fontHeadingColor"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/segoe_ui_bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Battery Brand: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"/>
+
+                <TextView
+                    android:id="@+id/btryBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brand"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Battery SKU: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"/>
+
+                <TextView
+                    android:id="@+id/btrySku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SKU"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Size: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"/>
+
+                <TextView
+                    android:id="@+id/btrySize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="size"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"/>
+
+                <TextView
+                    android:id="@+id/btryAvailableQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="qty"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/spLay"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_marginEnd="35dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                >
+                <Spinner
+                    android:id="@+id/techSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|start"
+                    android:backgroundTint="@color/blueOne"/>
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/assignedQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/spLay"
+                android:hint="Assigned Quantity"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="35dp"
+                android:paddingStart="10dp"
+                android:layout_marginStart="35dp"
+                android:inputType="numberDecimal"
+                android:textSize="18sp"
+                android:fontFamily="@font/segoe_ui"
+                android:textColorHint="@color/fontContentColor"
+                android:textColor="@color/fontContentColor"
+                android:maxLines="1"/>
+
+            <Button
+                android:id="@+id/submitStockToTechBtn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="25dp"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:layout_below="@id/assignedQuantity"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginStart="35dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/login_button_bcg"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

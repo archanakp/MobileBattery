@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".Activity.Adminhome">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="8dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="#ffffff"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tabTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manage Users"
+                        android:textSize="20sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/fontHeadingColor"
+                        android:fontFamily="@font/segoe_ui_bold"/>
+
+
+
+                    <TextView
+                        android:id="@+id/myAccountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Account"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textColor="@color/blackTextColor"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/myAccountIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/person"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/colorPrimaryDark"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/myAccountText"
+                        android:layout_marginEnd="10dp"
+                        />
+
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/blueOne"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nav_header_height"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logo"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/drawerRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:elevation="4dp"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="10">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="2.5"-->
+<!--                android:background="@color/colorPrimary"-->
+<!--                android:layout_height="match_parent"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/app_sort_name"-->
+<!--                    android:textSize="30sp"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:fontFamily="@font/segoe_ui"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    />-->
+<!--            </RelativeLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="7.5"-->
+<!--                android:background="#ffffff"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tabTitleText"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="User Listing"-->
+<!--                    android:textSize="24sp"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:textColor="@color/blackTextColor"-->
+<!--                    android:fontFamily="@font/segoe_ui"/>-->
+
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/myAccountText"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="My Account"-->
+<!--                    android:textSize="22sp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:fontFamily="@font/segoe_ui"-->
+<!--                    android:textColor="@color/blackTextColor"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    />-->
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:id="@+id/myAccountIcon"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:src="@drawable/person"-->
+<!--                    app:civ_border_width="2dp"-->
+<!--                    app:civ_border_color="@color/colorPrimaryDark"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_toStartOf="@id/myAccountText"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    />-->
+
+
+<!--            </RelativeLayout>-->
+
+<!--        </LinearLayout>-->
+
+
+
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="5dp"-->
+<!--            android:background="@android:color/white"/>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="10">-->
+
+<!--            <ScrollView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="2.5"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@color/blueOne">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/usersTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Manage Users"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/newBatteryTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="New Batteries"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:background="@color/blueOne"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/inventoryAllocationTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Inventory Allocation"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/supplierTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Supplier"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/scrapBatteryTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Scrap Battery"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/sellScrapBatteryTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Sell Scrap Battery"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/vehicleDetails"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Vehicle Details"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/cashInHandTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Cash In Hand"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/leadsTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Leads "-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/jobCreationTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Job Creation"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/customerProfileTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Customer Profile"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/callRecordTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Call Record"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/jobAssignedStatusTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Job Assigned status"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/accountingTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Accounting"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/loyaltyProgramTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Loyalty Program"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/expenseTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Expense"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/referralsTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Referrals"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id= "@+id/chatTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Chat"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id= "@+id/checkLocationTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Check Location"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id= "@+id/paymentTab"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:text="Payment"-->
+<!--                        android:textSize="26sp"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:fontFamily="@font/segoe_ui"-->
+<!--                        android:gravity="center"/>-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/white"/>-->
+
+<!--                </LinearLayout>-->
+
+
+<!--            </ScrollView>-->
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/frameLayout"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="7.5"-->
+<!--                android:background="@color/whiteBcgColor"-->
+<!--                android:layout_height="match_parent"-->
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </RelativeLayout>-->
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

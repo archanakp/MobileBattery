@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/edit_text_bcg"
+                >
+                <Spinner
+                    android:id="@+id/transferredSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:backgroundTint="@color/blueOne"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/edit_text_bcg"
+                >
+                <Spinner
+                    android:id="@+id/receivedSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:backgroundTint="@color/blueOne"/>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/edit_text_bcg"
+                >
+                <Spinner
+                    android:id="@+id/statusSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:backgroundTint="@color/blueOne"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/refreshFilter"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/login_button_bcg"
+                    android:src="@drawable/ic_refresh_white"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@color/listDeviderColor"
+            android:elevation="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:padding="0.5dp"
+            android:weightSum="11">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:text="Transfer To"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:gravity="center"
+                android:text="Sent By"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:text="Amount"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:text="Date"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:text="Status"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:text="Action"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noResultFoundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="No Result Found "
+            android:textSize="30sp"
+            android:textColor="@color/fontHeadingColor"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:layout_marginTop="40dp"
+            android:visibility="gone"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cashInHandRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:elevation="5dp"
+            android:background="@android:color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

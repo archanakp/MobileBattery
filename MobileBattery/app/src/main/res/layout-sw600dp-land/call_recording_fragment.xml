@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:weightSum="4">
+
+            <EditText
+                android:id="@+id/searchByNameET"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_bcg"
+                android:hint="Name"
+                android:textSize="18sp"
+                android:textColor="@color/fontContentColor"
+                android:textColorHint="@color/fontContentColor"
+                android:fontFamily="@font/segoe_ui"
+                android:paddingStart="10dp"
+                android:layout_marginEnd="7dp"/>
+
+            <EditText
+                android:id="@+id/searchByTimeET"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_bcg"
+                android:hint="Time"
+                android:textSize="18sp"
+                android:textColor="@color/fontContentColor"
+                android:textColorHint="@color/fontContentColor"
+                android:fontFamily="@font/segoe_ui"
+                android:paddingStart="10dp"
+                android:layout_marginStart="7dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:elevation="5dp"
+            android:background="@color/listDeviderColor"
+            android:padding="0.5dp"
+            android:weightSum="8">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Agent Name"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="20sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:gravity="center"
+                android:text="Call Time"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="20sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:gravity="center"
+                android:text="Call Remark"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="20sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0.5dp"
+                android:gravity="center"
+                android:text="Action"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="20sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noResultFoundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="No Result Found "
+            android:textSize="24sp"
+            android:textColor="@color/fontHeadingColor"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:layout_marginTop="40dp"
+            android:visibility="gone"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/callRecordingRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

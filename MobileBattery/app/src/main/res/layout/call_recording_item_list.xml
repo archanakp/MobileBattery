@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:elevation="5dp"
+        android:background="@android:color/white"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:background="@android:color/white"
+            android:paddingStart="25dp"
+            android:paddingEnd="5dp"
+            android:layout_marginBottom="1dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/center"
+                android:layout_toStartOf="@id/endRL">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: "
+                    android:visibility="gone"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="19sp"
+                    android:fontFamily="@font/segoe_ui_bold"/>
+
+                <TextView
+                    android:id="@+id/agentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="agentName"
+                    android:ellipsize="end"
+                    android:layout_toEndOf="@id/name"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/endRL">
+
+                <TextView
+                    android:id="@+id/job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Call Time: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"/>
+
+                <TextView
+                    android:id="@+id/callTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="callTime"
+                    android:ellipsize="end"
+                    android:layout_toEndOf="@id/job"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/center"
+                android:layout_toStartOf="@id/endRL">
+
+                <TextView
+                    android:id="@+id/amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="Remark: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/callRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="call Remark"
+                    android:ellipsize="end"
+                    android:layout_toEndOf="@id/amt"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/endRL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                >
+
+                <ImageView
+                    android:id="@+id/playAudioIV"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_play_circle"
+                    />
+
+                <ImageView
+                    android:id="@+id/pauseAudioIV"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_pause_circle"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mobileListDividerColor"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    tools:context=".Activity.LogInScreen">
+
+
+    <ImageView
+        android:id="@+id/closeForgotPasswordFormBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_close_blue"
+        android:layout_marginTop="20dp"
+        android:onClick="closeForgotPasswordForm"
+        android:layout_marginStart="20dp"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:id="@+id/loginForm"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:scrollbars="none"
+        android:paddingBottom="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/logo"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="20dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/email_icon"
+                    android:scaleType="centerCrop"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF05a4f5"/>
+
+                <EditText
+                    android:id="@+id/userNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:textColorHint="@color/textHintColor"
+                    android:hint="@string/email_id"
+                    android:fontFamily="@font/segoe_ui"
+                    android:paddingStart="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginEnd="20dp"
+                    android:paddingEnd="5dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:maxLines="1"
+                    android:textSize="22sp"
+                    android:textColor="@color/blackColor"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/lock_icon"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF05a4f5"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    >
+                    <EditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:textColorHint="@color/textHintColor"
+                        android:hint="@string/password"
+                        android:paddingStart="10dp"
+                        android:inputType="textPassword"
+                        android:paddingEnd="5dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:backgroundTint="@color/blueOne"
+                        android:maxLines="1"
+                        android:textSize="22sp"
+                        android:textColor="@color/blackColor"
+                        />
+
+                    <ImageView
+                        android:id="@+id/visibilityOff"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_visibility_off"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:onClick="showPassword"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:id="@+id/visibilityOn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_visibility"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:onClick="hidePassword"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/login_button_bcg"
+                android:onClick="signInBtn"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="@color/blueOne"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:onClick="forgetPassword"
+                android:fontFamily="@font/segoe_ui"
+                android:layout_marginBottom="20dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/forgotPassForm"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:src="@drawable/logo"
+                android:layout_marginTop="100dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="'Enter your registered Email Id'"
+                android:textSize="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/segoe_ui"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profil_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/email_icon"
+                    android:scaleType="centerCrop"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF05a4f5"/>
+
+                <EditText
+                    android:id="@+id/forgetEmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:textColorHint="@color/textHintColor"
+                    android:hint="@string/email_id"
+                    android:paddingStart="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:paddingEnd="5dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:maxLines="1"
+                    android:textSize="22sp"
+                    android:textColor="@color/blackColor"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reset Password"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/login_button_bcg"
+                android:onClick="resetPassBtn"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

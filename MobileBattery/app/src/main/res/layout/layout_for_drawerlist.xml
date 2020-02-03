@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/newBatteryTab"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="New Batteries"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:background="@color/blueOne"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/segoe_ui"
+        android:gravity="start|center_vertical"
+        android:paddingStart="15dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4a678f"/>
+
+</LinearLayout>

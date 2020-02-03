@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/relativeLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/addBatteryBrandBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/login_button_bcg"
+                android:text="+ Brand  "
+                android:textAllCaps="false"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp"
+                android:fontFamily="@font/segoe_ui"
+                android:textColor="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_toStartOf="@id/addBatteryBrandBtn"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/searchByBrandET"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_bcg"
+                    android:hint="Brand"
+                    android:paddingStart="10dp"
+                    android:layout_marginEnd="7dp"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontContentColor"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_bcg"
+                    android:hint="Brand"
+                    android:paddingStart="10dp"
+                    android:layout_marginStart="7dp"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontContentColor">
+
+                    <Spinner
+                        android:id="@+id/searchByStsSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/blueOne"
+                        android:paddingEnd="5dp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp">
+
+                    <ImageView
+                        android:id="@+id/refreshListIV"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_refresh_white"
+                        android:scaleType="centerInside"
+                        android:background="@drawable/login_button_bcg"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@color/listDeviderColor"
+            android:padding="0.5dp"
+            android:weightSum="14"
+            android:elevation="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:text="Brand Name"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="0.5dp"
+                android:paddingStart="10dp"
+                android:text="Status"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="0.5dp"
+                android:paddingStart="10dp"
+                android:text="Created Date"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="0.5dp"
+                android:paddingStart="10dp"
+                android:text="Action"
+                android:background="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="22sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noResultFoundTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Result Found!"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:textColor="@color/fontHeadingColor"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/brandRecyclerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:elevation="5dp"
+            android:background="@android:color/white"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:id="@+id/actionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/closeForm"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_close_blue"
+            android:layout_margin="10dp"/>
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Brand"
+                android:textColor="@color/fontHeadingColor"
+                android:textSize="18sp"
+                android:layout_gravity="start"
+                android:fontFamily="@font/segoe_ui"/>
+
+            <EditText
+                android:id="@+id/brandNameET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/blueOne"
+                android:hint="Brand Name"
+                android:textColorHint="@color/fontContentColor"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/fontContentColor"
+                android:textSize="16sp"
+                android:fontFamily="@font/segoe_ui"/>
+
+            <RadioGroup
+                android:id="@+id/actionRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:weightSum="2">
+                <RadioButton
+                    android:id="@+id/active"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="20sp"
+                    android:text="Active"
+                    android:checked="true"
+                    android:fontFamily="@font/segoe_ui_bold"/>
+                <RadioButton
+                    android:id="@+id/inactive"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="20sp"
+                    android:text="Inactive"
+                    android:fontFamily="@font/segoe_ui_bold"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/saveBatteryBrandBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/login_button_bcg"
+                android:layout_marginTop="20dp"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/segoe_ui_bold"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

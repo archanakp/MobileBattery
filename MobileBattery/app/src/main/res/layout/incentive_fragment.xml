@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <Button
+                android:id="@+id/addIncentive"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="+ Incentive  "
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/segoe_ui"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:background="@drawable/login_button_bcg"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginTop="15dp"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:weightSum="2">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_marginBottom="5dp">
+                <Spinner
+                    android:id="@+id/customerCareSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/blueOne"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/searchByNameEt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_text_bcg"
+                android:layout_marginStart="7dp"
+                android:hint="Name"
+                android:paddingStart="10dp"
+                android:textColor="@color/fontContentColor"
+                android:textColorHint="@color/fontContentColor"
+                android:fontFamily="@font/segoe_ui"
+                android:textSize="18sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:weightSum="2">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="5dp">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp">
+                <ImageButton
+                    android:id="@+id/resetFilter"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/login_button_bcg"
+                    android:src="@drawable/ic_refresh_white"/>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noResultFoundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="No Result Found "
+            android:textSize="24sp"
+            android:textColor="@color/fontHeadingColor"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:layout_marginTop="40dp"
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/incentiveList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:background="@android:color/white"
+            android:elevation="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:divider="@color/mobileListDividerColor"
+            android:dividerHeight="1dp"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/newIncentiveForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:scrollbars="none"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/closeFormIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_close_blue"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_below="@id/closeFormIV"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:textSize="17sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:paddingStart="8dp"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/line"
+                    >
+
+                    <Spinner
+                        android:id="@+id/userSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="1dp"
+                        android:backgroundTint="@color/blueOne"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textSize="17sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:paddingStart="8dp"/>
+
+                <EditText
+                    android:id="@+id/amountET"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/fontContentColor"
+                    android:hint="Amount"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:backgroundTint="@color/blueOne"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontContentColor"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receipt No."
+                    android:textSize="17sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/fontHeadingColor"
+                    android:paddingStart="8dp"/>
+
+                <EditText
+                    android:id="@+id/receiptNoET"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/blueOne"
+                    android:hint="Receipt No."
+                    android:inputType="phone"
+                    android:maxLength="9"
+                    android:maxLines="1"
+                    android:fontFamily="@font/segoe_ui"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/fontContentColor"
+                    android:textColorHint="@color/fontContentColor"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/saveBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:background="@drawable/login_button_bcg"
+                    android:paddingEnd="30dp"
+                    android:paddingStart="30dp"
+                    android:layout_marginBottom="20dp"
+                    />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

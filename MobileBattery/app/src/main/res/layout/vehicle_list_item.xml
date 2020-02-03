@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:paddingStart="25dp"
+            android:paddingEnd="5dp"
+            android:weightSum="14"
+            android:layout_marginBottom="1dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/action"
+                android:layout_above="@id/center">
+
+                <TextView
+                    android:id="@+id/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reg. No.: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/segoe_ui_bold"/>
+
+                <TextView
+                    android:id="@+id/noPlateTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="dcdzc"
+                    android:ellipsize="end"
+                    android:layout_toEndOf="@id/reg"
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/action"
+                android:layout_centerVertical="true">
+
+
+                <TextView
+                    android:id="@+id/regdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reg. Date: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"/>
+
+                <TextView
+                    android:id="@+id/regDateTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_toEndOf="@id/regdate"
+                    android:text="adad"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/action"
+                android:layout_below="@id/center">
+
+                <TextView
+                    android:id="@+id/ass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="Assigned To: "
+                    android:textColor="@color/fontHeadingColor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/techNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:background="@android:color/white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_toEndOf="@id/ass"
+                    android:text="efs"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segoe_ui"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/kmReadingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@android:color/white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:visibility="gone"
+                    android:textColor="@color/fontContentColor"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/segoe_ui"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/action"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:layout_alignParentEnd="true"
+                >
+
+                <ImageView
+                    android:id="@+id/assignBtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_assign"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/editBtn"
+                    android:layout_marginEnd="7dp"/>
+
+                <ImageView
+                    android:id="@+id/editBtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_edit_black"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_delete_black"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/editBtn"
+                    android:layout_marginStart="5dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mobileListDividerColor"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

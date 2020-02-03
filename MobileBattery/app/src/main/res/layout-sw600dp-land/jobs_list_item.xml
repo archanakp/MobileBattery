@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/listDeviderColor"
+        android:orientation="horizontal"
+        android:padding="0.5dp"
+        android:weightSum="14">
+
+        <TextView
+            android:id="@+id/customerNameTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@android:color/white"
+            android:ellipsize="end"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="customerNameTV"
+            android:textColor="@color/fontContentColor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/locationTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0.5dp"
+            android:layout_weight="3"
+            android:background="@android:color/white"
+            android:ellipsize="end"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="hjahsdfajk"
+            android:textColor="@color/blackTextColor"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/sourceOfCallTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0.5dp"
+            android:layout_weight="3"
+            android:background="@android:color/white"
+            android:ellipsize="end"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="dzfjhdzj"
+            android:textColor="@color/blackTextColor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/issueTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0.5dp"
+            android:layout_weight="3"
+            android:background="@android:color/white"
+            android:ellipsize="end"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="jhfds"
+            android:textColor="@color/blackTextColor"
+            android:textSize="18dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0.5dp"
+            android:layout_weight="2"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/assignJobBtn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="7dp"
+                android:layout_toStartOf="@id/editJobBtn"
+                android:src="@drawable/ic_assign" />
+
+            <ImageView
+                android:id="@+id/editJobBtn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_edit_black" />
+
+            <ImageView
+                android:id="@+id/deleteJobBtn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/editJobBtn"
+                android:src="@drawable/ic_delete_black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

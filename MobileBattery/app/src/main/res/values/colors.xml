@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#293d59</color>
+    <color name="colorPrimaryDark">#406BA5</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="whiteBgColor">#f9fafb</color>
+    <color name="fontHeadingColor">#293d59</color>
+    <color name="fontContentColor">#686868</color>
+    <color name="btnBgColor">#293d59</color>
+
+    <color name="blueOne">#293d59</color>
+    <color name="whiteBcgColor">#ececec</color>
+    <color name="blueTwo">#293d59</color>
+    <color name="blackColor">#000000</color>
+    <color name="blackTextColor">#686868</color>
+    <color name="textHintColor">#686868</color>
+    <color name="circleImgBdColor">#4d6a92</color>
+    <color name="listDeviderColor">#6B6161</color>
+    <color name="mobileListDividerColor">#C0C1C7</color>
+    <color name="blackTranBcg">#CD000000</color>
+    <color name="greenBcg">#2E7D32</color>
+    <color name="redBcg">#C62828</color>
+    <color name="yellowBcg">#F9A825</color>
+    <color name="chatBlue">#03a9f5</color>
+    <color name="chatWriteMessageBcg">#e7f7f7</color>
+
+
+
+</resources>

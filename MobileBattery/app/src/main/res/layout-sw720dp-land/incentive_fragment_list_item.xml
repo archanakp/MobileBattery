@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/listDeviderColor"
+        android:padding="0.5dp"
+        android:weightSum="12">
+        <TextView
+            android:id="@+id/agentName"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/fontContentColor"
+            android:textSize="20sp"
+            android:fontFamily="@font/segoe_ui"
+            />
+        <TextView
+            android:id="@+id/leadId"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0.5dp"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/fontContentColor"
+            android:textSize="20sp"
+            android:fontFamily="@font/segoe_ui"
+            />
+        <TextView
+            android:id="@+id/incentiveAmount"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0.5dp"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/fontContentColor"
+            android:textSize="20sp"
+            android:fontFamily="@font/segoe_ui"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
